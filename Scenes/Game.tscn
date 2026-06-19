@@ -24,7 +24,7 @@ slime_scene = ExtResource("3_j5yw3")
 spawn_timer = NodePath("Timer")
 score_label = NodePath("UI/Score")
 game_over_label = NodePath("UI/GameOver")
-metadata/_edit_vertical_guides_ = [-255.0, 255.0]
+metadata/_edit_vertical_guides_ = [-255.0, 255.0, 576.0]
 metadata/_edit_horizontal_guides_ = [50.0, 115.0]
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=1919732905]
@@ -130,5 +130,17 @@ theme_override_fonts/font = ExtResource("5_b2bpf")
 theme_override_font_sizes/font_size = 57
 text = "Game By Eished"
 horizontal_alignment = 1
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=2051474597]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -643.0
+offset_right = 559.0
+offset_bottom = -8.0
+grow_vertical = 0
+joystick_mode = 1
+visibility_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_spawn_slime"]
